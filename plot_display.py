@@ -510,3 +510,25 @@ def print_figure(name):
 # print_figure(name2)
 # name3 = "replayed/45-90/12-av-wpd/joint2/rev1-6392525815109495392-00008"
 # print_figure(name3)
+
+
+# baseline 
+
+name = "test_audio/baseline/rev1-6331559613336179781-00019"
+print_figure(name)
+
+# low_rank 
+name = "test_audio/low_rank/rev1-6331559613336179781-00019"
+print_figure(name)
+
+# low_rank + nas
+name = "test_audio/low_rank+nas/rev1-6331559613336179781-00019"
+print_figure(name)
+
+# low_rank + parameter_sharing 
+name = "test_audio/low_rank+parameter_sharing/rev1-6331559613336179781-00019"
+print_figure(name)
+
+# low_rank + parameter_sharing+kl_based_quantization
+name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev1-6331559613336179781-00019"
+print_figure(name)
