@@ -52,20 +52,61 @@ Parameter Tying and Mixed Precision Quantization</h2>
     <p style="line-height:100%" align="center"><b>Authors:</b> </p>
     <p style="line-height:100%" align="justify"> <b>Abstract: </b> Speech enhancement systems are crucial components in many speech processing tasks, such as automatic speech recognition (ASR). Their practical deployment on devices requires their memory footprints and computation costs to be aggressively reduced. To this end, a novel KL divergence based parameter sharing approach is proposed for state-of-the-art temporal convolutional networks (TCNs) based audio-visual multi-channel speech separation systems featuring mask-based MVDR beamforming. Experiments are conducted on two tasks using overlapped speech simulated from the English Oxford LRS2 and Cantonese CI-AVSR datasets. The efficacy of the proposed TCN parameter tying approach is extensively shown when used as a standalone model architecture compression technique in comparison to low-rank factorization and penalized neural architecture search, as well as when combined with low-rank factorization and mixed precision low-bit precision quantization approaches. An overall “lossless” model compression ratio of up to 18.54 times is obtained over the baseline uncompressed audio-visual multi-channel speech separation system while incurring no statistically significant ASR word or character error rate increase. Comparable speech enhancement performance measured using scale-invariant signal-to-noise ratio (SI-SNR) scores is also produced. The same “lossless” speech enhancement system compression ratio is retained after applying 5-bit mixed precision quantization to the Conformer ASR back-end.</p>
     <a href="#sectionI">I. Audio-visual Multi-channel Mask-based MVDR Speech Separation Front-end</a><br>
-    <a href="#sectionIII">III. TCN Model Architecture Compression</a><br>
+    <a href="#sectionII">II. TCN Model Architecture Compression</a><br>
     <a href="#sectionIII">III. Low-bit Precision Quantizatoin Of TCN</a><br>
     <a href="#sectionIII">IV. Experimental Setup and Results</a><br>
     <a href="#sectionIV">IV. Reference</a>
     <h3> <a name="sectionI"> I. Audio-visual Multi-channel Mask-based MVDR Speech Separation Front-end</a> </h3>
     <div style="border: none; width:60%; margin: 0 auto;">
-    <img border="0" src="architectures.png" alt="architectures of speech enhancement front-end" height="10%">
+    <img border="0" src="picture/neural_network.png" alt="architectures of speech enhancement front-end" height="10%">
     </div>
     <ul>
-        <li> In the architecture-1, speech separaiton (based on the audio-visual mask-based MVDR [1]) followed by dereverberation (based on the audio-visual DNN-WPE or SpecM [2]).</li>
-        <li> In the architecture-2, speech dereverberation (based on the audio-visual DNN-WPE or SpecM) followed by separation (based on the audio-visual mask-based MVDR).</li>
-        <li> In the architecture-3, joint speech separation & dereverberation using the audio-visual mask-based WPD. </li>
-        <li> The internal structural details of audio-visual mask-based MVDR, DNN-WPE, SpecM and mask-based WPD as well as the Visual Front-end modules can be seen in  Fig. 1 and Fig. 3 of the submitted paper.  </li>
+        <li> Audio-visual multi-channel mask-based MVDR based speech separation system. The TCN blocks are highlighted in blue (one in the Audio Block; three in the Target Speech and Noise Blocks each), which account for more than 84% of the overall model parameters. The speech separation front-end is on the top (the light yellow box), and the Conformer recognition back-end is on the bottom (the light red box)..</li>
     </ul>
+    <h3> <a name="sectionII"> II. TCN Model Architecture Compression</a> </h3>
+    <div style="border: none; width:60%; margin: 0 auto;">
+    <img border="0" src="picture/conv_block.png" alt="architectures of speech enhancement front-end" style="width:300px;">
+    </div>
+    <ul>
+        <li> Temporal convolutional network (TCN) block. Each of the 8 dilated 1-D ConvBlocks consists of two 1×1 convolutional layers located at both ends (“1x1 Conv1” and “1x1 Conv2” in blue). A depth-wise separable convolution layer (D-Conv) is located in the center. PReLU and batch normalization layers are added before and after the D-Conv layer.</li>
+    </ul>
+    <div style="border: none; width:60%; margin: 0 auto;">
+    <img border="0" src="picture/low_rank.png" alt="low-rank factorization" style="width:300px;">
+    </div>
+      <ul>
+          <li> Low-rank factorization of the two TCN 1x1 convolutional layers into four “1x1 Conv1 (left/right)” and “1x1 Conv2 (left/right)” weight matrices in blue.</li>
+      </ul>
+    <div style="border: none; width:60%; margin: 0 auto;">
+      <img border="0" src="picture/NAS.png" alt="penalized neural architecture search" style="width:300px;">
+    </div>
+      <ul>
+          <li> Penalized neural architecture search over the projection layer dimensionality for low-rank factorized TCN 1x1convolutional layers ranging from 40 to 170.</li>
+      </ul>
+    <div style="border: none; width:60%; margin: 0 auto;">
+        <img border="0" src="picture/share.png" alt="parameter sharing" style="width:300px;">
+    </div>
+      <ul>
+        <li> Parameter sharing among low-rank factorized weight matrices located at comparable positions (highlighted in the same yellow boxes) across different dilated 1-D ConvBlocks within a TCN.</li>
+      </ul>
+    <h3> <a name="sectionIII"> III. Low-bit Precision Quantizatoin Of TCN</a> </h3>
+      <div style="border: none; width:60%; margin: 0 auto;">
+      <img border="0" src="picture/kl.png" alt="KL divergence based mixed precision quantization" style="width:300px;">
+      </div>
+      <ul>
+          <li> Mixed precision quantization of low-rank factorized TCN’s 1x1 convolutional layers (shown "1x1 Conv1 (left/right)" and "1x1 Conv2 (left/right)") with their layer level varying precision settings learned using KL divergence.</li>
+      </ul>
+      <div style="border: none; width:60%; margin: 0 auto;">
+        <img border="0" src="picture/hessian.png" alt="Hessian trace based mixed precision quantization" style="width:300px;">
+      </div>
+      <ul>
+        <li> Mixed precision quantization of low-rank factorized TCN’s 1x1 convolutional layers (shown "1x1 Conv1 (left/right)" and "1x1 Conv2 (left/right)") with their layer level varying precision settings learned using Hessian trace.</li>
+      </ul>
+      <div style="border: none; width:60%; margin: 0 auto;">
+        <img border="0" src="picture/nas_q.png" alt="penalized NAS based mixed precision quantization" style="width:300px;">
+      </div>
+      <ul>
+        <li> mixed precision quantization of low-rank factorized TCN’s 1x1 convolutional layers (shown "1x1 Conv1 (left/right)" and "1x1 Conv2 (left/right)") with their layer level varying precision settings learned using penalized NAS.</li>
+      </ul>
 </body>
 </div>
 </html>
