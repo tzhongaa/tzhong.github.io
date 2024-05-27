@@ -61,7 +61,7 @@ Parameter Tying and Mixed Precision Quantization</h2>
     <img border="0" src="picture/neural_network.png" alt="architectures of speech enhancement front-end" height="10%">
     </div>
     <ul>
-        <li> Audio-visual multi-channel mask-based MVDR based speech separation system. The TCN blocks are highlighted in blue (one in the Audio Block; three in the Target Speech and Noise Blocks each), which account for more than 84% of the overall model parameters. The speech separation front-end is on the top (the light yellow box), and the Conformer recognition back-end is on the bottom (the light red box)..</li>
+        <li> Audio-visual multi-channel mask-based MVDR based speech separation system [1]. The TCN blocks are highlighted in blue (one in the Audio Block; three in the Target Speech and Noise Blocks each), which account for more than 84% of the overall model parameters. The speech separation front-end is on the top (the light yellow box), and the Conformer recognition back-end is on the bottom (the light red box)..</li>
     </ul>
     <h3> <a name="sectionII"> II. TCN Model Architecture Compression</a> </h3>
     <div style="border: none; width:60%; margin: 0 auto;">
@@ -93,7 +93,7 @@ Parameter Tying and Mixed Precision Quantization</h2>
       <img border="0" src="picture/kl.png" alt="KL divergence based mixed precision quantization" style="width:300px;">
       </div>
       <ul>
-          <li> Mixed precision quantization of low-rank factorized TCN’s 1x1 convolutional layers (shown "1x1 Conv1 (left/right)" and "1x1 Conv2 (left/right)") with their layer level varying precision settings learned using KL divergence.</li>
+          <li> Mixed precision quantization of low-rank factorized TCN’s 1x1 convolutional layers (shown "1x1 Conv1 (left/right)" and "1x1 Conv2 (left/right)") with their layer level varying precision settings learned using KL divergence [2].</li>
       </ul>
       <div style="border: none; width:60%; margin: 0 auto;">
         <img border="0" src="picture/hessian.png" alt="Hessian trace based mixed precision quantization" style="width:300px;">
@@ -342,6 +342,9 @@ Parameter Tying and Mixed Precision Quantization</h2>
   </tr>
       </table>
       </div>
+      <h3><a name="sectionV">IV. Reference</a></h3>
+      <p> [1] J. Yu et al., “Audio-Visual Multi-Channel Integration and Recognition of Overlapped Speech,” IEEE T AUDIO SPEECH, 2021.</p>
+      <p> [2] J. Xu et al., “Mixed Precision DNN Quantization for Overlapped Speech Separation and Recognition,” in ICASSP, 2022.</p>
     </body>
 </div>
 </html>
