@@ -117,67 +117,134 @@ Parameter Tying and Mixed Precision Quantization</h2>
         </ul>
       <h4> B. Experimental results of speech enhancement front-end outputs on the simulated LRS2 mixture speech </h4>
       <table border="1">
-        <tr>
-            <th rowspan="1" colspan="1"></th>
-            <th colspan="1"> Audio </th>
-          </tr>
-             <tr>
-              <th colspan="1"> Target speaker video</th>
+          <tr>
+              <th rowspan="2" colspan="2"></th>
+              <th colspan="4"> Four ranges of the angle difference between the target and interfering speakers relative to the microphone array </th>
+            </tr>
+            <tr>
+                <th>[0°-15°)</th>
+                <th>[15°-45°)</th>
+                <th>[45°-90°)</th>
+                <th>[90°-180°)</th>
+            </tr>
+            <tr>
+              <th colspan="2"> Target speaker video</th>
               <td style="text-align:center">
                   <video src="test_audio/clean/transm5-6331559613336179781-00019.mp4" controls="controls">
                       your browser does not support the video tag
                   </video>
               </td>
+              <td style="text-align:center">
+                  <video src="test_audio/clean/transm5-6331559613336179781-00027.mp4" controls="controls">
+                      your browser does not support the video tag
+                  </video>
+              </td>
+              <td style="text-align:center">
+                  <video src=test_audio/clean/transm5-6331559613336179781-00029.mp4 controls="controls">
+                      your browser does not support the video tag
+                  </video>
+              </td>
+              <td style="text-align:center">
+                  <video src=test_audio/clean/transm5-6332062124509813446-00018.mp4 controls="controls">
+                      your browser does not support the video tag
+                  </video>
+              </td>
           </tr>
           <tr>
-            <th colspan="1">Mixture  </th>
+            <th colspan="2">Mixture </th>
             <td style="text-align:center">
-                <img src="test_audio/simulated/0-15/0-mc/mixture/00019.png" alt style="width:200px;">
+                <img src="test_audio/simulated/0-15/0-mc/mixture/00019.png" alt>
                 <audio src="test_audio/simulated/0-15/0-mc/mixture/00019.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="test_audio/simulated/15-45/0-mc/mixture/00027.png" alt>
+                <audio src="test_audio/simulated/15-45/0-mc/mixture/00027.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="test_audio/simulated/45-90/0-mc/mixture/00029.png" alt>
+                <audio src="test_audio/simulated/45-90/0-mc/mixture/00029.wav" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td style="text-align:center">
+                <img src="test_audio/simulated/90-180/0-mc/mixture/00018.png" alt>
+                <audio src="test_audio/simulated/90-180/0-mc/mixture/00018.wav" controls="controls">
                     Your browser does not support the audio element.
                 </audio>
             </td>
         </tr>
         <tr>
-          <th colspan="1">Baseline <br> (uncompressed model) </th>
+          <th colspan="2">Clean</th>
+           <td style="text-align:center">
+              <img src="test_audio/simulated/0-15/0-mc/clean/00019.png" alt>
+              <audio src="test_audio/simulated/0-15/0-mc/clean/00019.wav" controls="controls">
+                  Your browser does not support the audio element.
+              </audio>
+          </td>
+            <td style="text-align:center">
+              <img src="test_audio/simulated/15-45/0-mc/clean/00027.png" alt>
+              <audio src="test_audio/simulated/15-45/0-mc/clean/00027.wav" controls="controls">
+                  Your browser does not support the audio element.
+              </audio>
+          </td>
           <td style="text-align:center">
-              <img src="test_audio/baseline/rev1-6331559613336179781-00019.png" alt style="width:200px;">
+              <img src="test_audio/simulated/45-90/0-mc/clean/00029.png" alt>
+              <audio src="test_audio/simulated/45-90/0-mc/clean/00029.wav" controls="controls">
+                  Your browser does not support the audio element.
+              </audio>
+          </td>
+          <td style="text-align:center">
+              <img src="test_audio/simulated/90-180/0-mc/clean/00018.png" alt>
+              <audio src="test_audio/simulated/90-180/0-mc/clean/00018.wav" controls="controls">
+                  Your browser does not support the audio element.
+              </audio>
+          </td>
+      </tr>
+      <tr>
+        <tr>
+          <th colspan="2">Baseline <br> (uncompressed model) </th>
+          <td style="text-align:center">
+              <img src="test_audio/baseline/rev1-6331559613336179781-00019.png" alt >
               <audio src="test_audio/baseline/rev1-6331559613336179781-00019.wav" controls="controls">
                   Your browser does not support the audio element.
               </audio>
           </td>
       </tr>
         <tr>
-          <th colspan="1">Low rank</th>
+          <th colspan="2">Low rank</th>
           <td style="text-align:center">
-              <img src="test_audio/low_rank/rev1-6331559613336179781-00019.png" alt style="width:200px;">
+              <img src="test_audio/low_rank/rev1-6331559613336179781-00019.png" alt >
               <audio src="test_audio/low_rank/rev1-6331559613336179781-00019.wav" controls="controls">
                   Your browser does not support the audio element.
               </audio>
           </td>
       </tr>
       <tr>
-        <th colspan="1">Low rank + <br> Penalized NAS</th>
+        <th colspan="2">Low rank + <br> Penalized NAS</th>
         <td style="text-align:center">
-            <img src="test_audio/low_rank+nas/rev1-6331559613336179781-00019.png" alt style="width:200px;">
+            <img src="test_audio/low_rank+nas/rev1-6331559613336179781-00019.png" alt >
             <audio src="test_audio/low_rank+nas/rev1-6331559613336179781-00019.wav" controls="controls">
                 Your browser does not support the audio element.
             </audio>
         </td>
     </tr>
     <tr>
-      <th colspan="1">Low rank + <br> Parameter Sharing</th>
+      <th colspan="2">Low rank + <br> Parameter Sharing</th>
       <td style="text-align:center">
-          <img src="test_audio/low_rank+parameter_sharing/rev1-6331559613336179781-00019.png" alt style="width:200px;">
+          <img src="test_audio/low_rank+parameter_sharing/rev1-6331559613336179781-00019.png" alt >
           <audio src="test_audio/low_rank+parameter_sharing/rev1-6331559613336179781-00019.wav" controls="controls">
               Your browser does not support the audio element.
           </audio>
       </td>
   </tr>
   <tr>
-    <th colspan="1">Low rank + <br> Penalized NAS + <br> KL Divergence Based <br> Mixed Precision Quantization</th>
+    <th colspan="2">Low rank + <br> Penalized NAS + <br> KL Divergence Based <br> Mixed Precision Quantization</th>
     <td style="text-align:center">
-        <img src="test_audio/low_rank+parameter_sharing+kl_based_quantization/rev1-6331559613336179781-00019.png" alt style="width:200px;">
+        <img src="test_audio/low_rank+parameter_sharing+kl_based_quantization/rev1-6331559613336179781-00019.png" alt >
         <audio src="test_audio/low_rank+parameter_sharing+kl_based_quantization/rev1-6331559613336179781-00019.wav" controls="controls">
             Your browser does not support the audio element.
         </audio>
