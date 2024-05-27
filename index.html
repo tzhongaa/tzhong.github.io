@@ -105,8 +105,32 @@ Parameter Tying and Mixed Precision Quantization</h2>
         <img border="0" src="picture/nas_q.png" alt="penalized NAS based mixed precision quantization" style="width:300px;">
       </div>
       <ul>
-        <li> mixed precision quantization of low-rank factorized TCN’s 1x1 convolutional layers (shown "1x1 Conv1 (left/right)" and "1x1 Conv2 (left/right)") with their layer level varying precision settings learned using penalized NAS.</li>
+        <li> Mixed precision quantization of low-rank factorized TCN’s 1x1 convolutional layers (shown "1x1 Conv1 (left/right)" and "1x1 Conv2 (left/right)") with their layer level varying precision settings learned using penalized NAS.</li>
       </ul>
-</body>
+      <h3> <a name="sectionIV">IV. Experimental Setup and Results</a></h3>
+      <div style="border: none; width:100%; margin: 0 auto;">
+      <h4> A. Experimental setup </h4>
+        <ul>
+            <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multi-channel overlapped-reverberant-noisy mixture speech using the Oxford LRS2 dataset [3] with 96997, 4272 and 4972 utterances respectively for training (91.37 hours), validation (2.59 hours) and test (2.32 hours). </li>
+            <li> 1200 (0.5 hours) utterances are recorded by replaying two loudspeakers simultaneously to generate a 15-channel overlapped-reverberant-noisy mixture speech in a meeting room [1], based on the Oxford LRS2 test set. The geometric specification of the microphone array used during recording is the same as that used in the simulation. </li>
+            <li> Espnet style Conformer AED ASR model contains 12 encoder and 6 decoder layers is used in the submitted paper. </li>
+        </ul>
+      <h4> B. Experimental results of speech enhancement front-end outputs on the simulated LRS2 mixture speech </h4>
+      <table border="1">
+        <tr>
+            <th rowspan="1" colspan="1"></th>
+            <th colspan="1"> Audio </th>
+          </tr>
+             <tr>
+              <th colspan="1"> Target speaker video</th>
+              <td style="text-align:center">
+                  <video src="test_audio/clean/transm5-6331559613336179781-00019.mp4" controls="controls">
+                      your browser does not support the video tag
+                  </video>
+              </td>
+          </tr>
+      </table>
+      </div>
+    </body>
 </div>
 </html>
