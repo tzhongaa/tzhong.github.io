@@ -520,7 +520,7 @@ name = "test_audio/baseline/rev2-6331559613336179781-00027"
 print_figure(name)
 name = "test_audio/baseline/rev3-6331559613336179781-00029"
 print_figure(name)
-name = "test_audio/baseline/rev4-6331559613336179781-00036"
+name = "test_audio/baseline/rev4-6332062124509813446-00018"
 print_figure(name)
 
 # low_rank 
@@ -530,7 +530,7 @@ name = "test_audio/low_rank/rev2-6331559613336179781-00027"
 print_figure(name)
 name = "test_audio/low_rank/rev3-6331559613336179781-00029"
 print_figure(name)
-name = "test_audio/low_rank/rev4-6331559613336179781-00036"
+name = "test_audio/low_rank/rev4-6332062124509813446-00018"
 print_figure(name)
 
 # low_rank + nas
@@ -540,7 +540,7 @@ name = "test_audio/low_rank+nas/rev2-6331559613336179781-00027"
 print_figure(name)
 name = "test_audio/low_rank+nas/rev3-6331559613336179781-00029"
 print_figure(name)
-name = "test_audio/low_rank+nas/rev4-6331559613336179781-00036"
+name = "test_audio/low_rank+nas/rev4-6332062124509813446-00018"
 print_figure(name)
 
 # low_rank + parameter_sharing 
@@ -550,7 +550,7 @@ name = "test_audio/low_rank+parameter_sharing/rev2-6331559613336179781-00027"
 print_figure(name)
 name = "test_audio/low_rank+parameter_sharing/rev3-6331559613336179781-00029"
 print_figure(name)
-name = "test_audio/low_rank+parameter_sharing/rev4-6331559613336179781-00036"
+name = "test_audio/low_rank+parameter_sharing/rev4-6332062124509813446-00018"
 print_figure(name)
 
 # low_rank + parameter_sharing+kl_based_quantization
@@ -560,5 +560,5 @@ name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev2-6331559
 print_figure(name)
 name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev3-6331559613336179781-00029"
 print_figure(name)
-name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev4-6331559613336179781-00036"
+name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev4-6332062124509813446-00018"
 print_figure(name)
