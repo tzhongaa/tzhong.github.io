@@ -109,12 +109,20 @@ Parameter Tying and Mixed Precision Quantization</h2>
       </ul>
       <h3> <a name="sectionIV">IV. Experimental Setup and Results</a></h3>
       <div style="border: none; width:100%; margin: 0 auto;">
-      <h4> A. Experimental setup on the simulated LRS2 mixture speech</h4>
+      <h4> A. Experimental setup</h4>
+        <h5> (1) Oxford LRS2 data simulated overlapped speech </h5>
         <ul>
-            <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multi-channel overlapped-reverberant-noisy mixture speech using the Oxford LRS2 dataset [3] with 96997, 4272 and 4972 utterances respectively for training (91.37 hours), validation (2.59 hours) and test (2.32 hours). </li>
+            <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multi-channel overlapped speech using the Oxford LRS2 dataset [3] with 96997, 4272 and 4972 utterances respectively for training (91.37 hours), validation (2.59 hours) and test (2.32 hours). </li>
             <li> Espnet style Conformer AED ASR model contains 12 encoder and 6 decoder layers is used in the submitted paper. </li>
+            <li> In all the experiments of the simulated LRS2 overlapped speech, “lossless” compression is achieved when no statistically significant (MAPSSWE [4], $\alpha= 0.05$) WER increase is observed after model compression. </li>
         </ul>
-      <h4> B. Experimental results of speech enhancement front-end outputs on the simulated LRS2 mixture speech </h4>
+        <h5> (2) CI-AVSR simulated overlapped speech </h5>
+        <ul>
+            <li> A 3-channel symmetric linear array with an even inter-channel spacing is leveraged to simulate the multi-channel overlapped speech using the Cantonese CI-AVSR in-car command speech corpus [5] with 89804, 12844 and 13182 utterances respectively for training (68.8 hours), validation (9.4 hours) and test (9.4 hours). </li>
+            <li> Espnet style Conformer AED ASR model contains 12 encoder and 6 decoder layers is used in the submitted paper. </li>
+            <li> In all the experiments of the simulated CI-AVSR overlapped speech, “lossless” compression is achieved when no statistically significant (MAPSSWE [4], $\alpha= 0.05$) CER increase is observed after model compression. </li>
+        </ul>
+      <h4> B. Experimental results of speech enhancement front-end outputs on the simulated LRS2 overlapped speech </h4>
       <table border="1">
           <tr>
               <th rowspan="2" colspan="2"></th>
