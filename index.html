@@ -110,22 +110,23 @@ Parameter Tying and Mixed Precision Quantization</h2>
       <h3> <a name="sectionIV">IV. Experimental Setup and Results</a></h3>
       <div style="border: none; width:100%; margin: 0 auto;">
       <h4> A. Experimental setup</h4>
-        <h5> (1) Oxford LRS2 data simulated overlapped speech </h5>
+        <h4> (1) Oxford LRS2 data simulated overlapped speech </h4>
         <ul>
             <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multi-channel overlapped speech using the Oxford LRS2 dataset [3] with 96997, 4272 and 4972 utterances respectively for training (91.37 hours), validation (2.59 hours) and test (2.32 hours). </li>
             <li> Espnet style Conformer AED ASR model contains 12 encoder and 6 decoder layers is used in the submitted paper. </li>
-            <li> In all the experiments of the simulated LRS2 overlapped speech, “lossless” compression is achieved when no statistically significant (MAPSSWE [4], $\alpha= 0.05$) WER increase is observed after model compression. </li>
+            <li> In all the experiments of the simulated LRS2 overlapped speech, “lossless” compression is achieved when no statistically significant (MAPSSWE [4], &alpha;= 0.05) WER increase is observed after model compression. </li>
         </ul>
-        <h5> (2) CI-AVSR simulated overlapped speech </h5>
+        <h4> (2) CI-AVSR simulated overlapped speech </h4>
         <ul>
-            <li> A 3-channel symmetric linear array with an even inter-channel spacing is leveraged to simulate the multi-channel overlapped speech using the Cantonese CI-AVSR in-car command speech corpus [5] with 89804, 12844 and 13182 utterances respectively for training (68.8 hours), validation (9.4 hours) and test (9.4 hours). </li>
+            <li> A 3-channel symmetric linear array with even inter-channel spacing is leveraged to simulate the multi-channel overlapped speech using the Cantonese CI-AVSR in-car command speech corpus [5] with 89804, 12844 and 13182 utterances respectively for training (68.8 hours), validation (9.4 hours) and test (9.4 hours). </li>
             <li> Espnet style Conformer AED ASR model contains 12 encoder and 6 decoder layers is used in the submitted paper. </li>
-            <li> In all the experiments of the simulated CI-AVSR overlapped speech, “lossless” compression is achieved when no statistically significant (MAPSSWE [4], $\alpha= 0.05$) CER increase is observed after model compression. </li>
+            <li> In all the experiments of the simulated CI-AVSR overlapped speech, “lossless” compression is achieved when no statistically significant (MAPSSWE [4], 	&alpha;= 0.05) CER increase is observed after model compression. </li>
         </ul>
       <h4> B. Experimental results of speech enhancement front-end outputs on the simulated LRS2 overlapped speech </h4>
       <table border="1">
           <tr>
               <th rowspan="2" colspan="2"></th>
+              <th rowspan="2" colspan="2">Maximum “lossless” compression ratio</th>
               <th colspan="4"> Four ranges of the angle difference between the target and interfering speakers relative to the microphone array </th>
             </tr>
             <tr>
@@ -136,6 +137,7 @@ Parameter Tying and Mixed Precision Quantization</h2>
             </tr>
             <tr>
               <th colspan="2"> Target speaker video</th>
+              <th colspan="2"> - </th>
               <td style="text-align:center">
                   <video src="test_audio/clean/transm5-6331559613336179781-00019.mp4" controls="controls">
                       your browser does not support the video tag
@@ -158,7 +160,8 @@ Parameter Tying and Mixed Precision Quantization</h2>
               </td>
           </tr>
           <tr>
-            <th colspan="2">Mixture </th>
+            <th colspan="2"> Overlapped </th>
+            <th colspan="2"> - </th>
             <td style="text-align:center">
                 <img src="test_audio/simulated/0-15/0-mc/mixture/00019.png" alt>
                 <audio src="test_audio/simulated/0-15/0-mc/mixture/00019.wav" controls="controls">
@@ -186,6 +189,7 @@ Parameter Tying and Mixed Precision Quantization</h2>
         </tr>
         <tr>
           <th colspan="2">Clean</th>
+          <th colspan="2">-</th>
            <td style="text-align:center">
               <img src="test_audio/simulated/0-15/0-mc/clean/00019.png" alt>
               <audio src="test_audio/simulated/0-15/0-mc/clean/00019.wav" controls="controls">
@@ -213,7 +217,8 @@ Parameter Tying and Mixed Precision Quantization</h2>
       </tr>
       <tr>
         <tr>
-          <th colspan="2">Baseline <br> (uncompressed model) </th>
+          <th colspan="2">Audio-visual Mask-based MVDR <br> (uncompressed model) <br> (Sys. 1 in TABLE IV in the submitted paper) </th>
+          <th colspan="2">1.0 </th>
           <td style="text-align:center">
               <img src="test_audio/baseline/rev1-6331559613336179781-00019.png" alt >
               <audio src="test_audio/baseline/rev1-6331559613336179781-00019.wav" controls="controls">
@@ -240,7 +245,8 @@ Parameter Tying and Mixed Precision Quantization</h2>
     </td>
       </tr>
         <tr>
-          <th colspan="2">Low rank</th>
+          <th colspan="2">Audio-visual Mask-based MVDR + <br> Low Rank <br> (Sys. 2 in TABLE IV in the submitted paper)</th>
+          <th colspan="2">2.07</th>
           <td style="text-align:center">
               <img src="test_audio/low_rank/rev1-6331559613336179781-00019.png" alt >
               <audio src="test_audio/low_rank/rev1-6331559613336179781-00019.wav" controls="controls">
@@ -267,7 +273,8 @@ Parameter Tying and Mixed Precision Quantization</h2>
     </td>
       </tr>
       <tr>
-        <th colspan="2">Low rank + <br> Penalized NAS</th>
+        <th colspan="2">Audio-visual Mask-based MVDR + <br>Low Rank + <br> Penalized NAS <br> (Sys. 4 in TABLE IV in the submitted paper)</th>
+        <th colspan="2">2.87</th>
         <td style="text-align:center">
             <img src="test_audio/low_rank+nas/rev1-6331559613336179781-00019.png" alt >
             <audio src="test_audio/low_rank+nas/rev1-6331559613336179781-00019.wav" controls="controls">
@@ -294,7 +301,8 @@ Parameter Tying and Mixed Precision Quantization</h2>
   </td>
     </tr>
     <tr>
-      <th colspan="2">Low rank + <br> Parameter Sharing</th>
+      <th colspan="2">Audio-visual Mask-based MVDR + <br>Low Rank + <br> Parameter Sharing <br> (Sys. 5 in TABLE IV in the submitted paper)</th>
+      <th colspan="2">3.93</th>
       <td style="text-align:center">
           <img src="test_audio/low_rank+parameter_sharing/rev1-6331559613336179781-00019.png" alt >
           <audio src="test_audio/low_rank+parameter_sharing/rev1-6331559613336179781-00019.wav" controls="controls">
@@ -321,7 +329,8 @@ Parameter Tying and Mixed Precision Quantization</h2>
 </td>
   </tr>
   <tr>
-    <th colspan="2">Low rank + <br> Parameter Sharing + <br> KL Divergence Based <br> Mixed Precision Quantization</th>
+    <th colspan="2">Audio-visual Mask-based MVDR + <br>Low Rank + <br> Parameter Sharing + <br> KL Divergence Based <br> Mixed Precision Quantization <br> (Sys. 16 in TABLE IV in the submitted paper)</th>
+    <th colspan="2">18.54</th>
     <td style="text-align:center">
         <img src="test_audio/low_rank+parameter_sharing+kl_based_quantization/rev1-6331559613336179781-00019.png" alt >
         <audio src="test_audio/low_rank+parameter_sharing+kl_based_quantization/rev1-6331559613336179781-00019.wav" controls="controls">
@@ -353,6 +362,8 @@ Parameter Tying and Mixed Precision Quantization</h2>
       <p> [1] J. Yu et al., “Audio-Visual Multi-Channel Integration and Recognition of Overlapped Speech,” IEEE T AUDIO SPEECH, 2021.</p>
       <p> [2] J. Xu et al., “Mixed Precision DNN Quantization for Overlapped Speech Separation and Recognition,” in ICASSP, 2022.</p>
       <p> [3] J. Son Chung et al., “Lip Reading Sentences in the Wild,” in CVPR, 2017.</p>
+      <p> [4] L. Gillick et al., “Some statistical issues in the comparison of speech recognition algorithms,” in ICASSP, 1989.</p>
+      <p> [5] W. Dai et al., “CI-AVSR: A Cantonese Audio-Visual Speech Datasetfor In-car Command Recognition,” in LREC, 2022.</p>
     </body>
 </div>
 </html>
