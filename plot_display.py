@@ -514,51 +514,131 @@ def print_figure(name):
 
 # baseline 
 
-name = "test_audio/baseline/rev1-6331559613336179781-00019"
+# name = "test_audio/baseline/rev1-6331559613336179781-00019"
+# print_figure(name)
+# name = "test_audio/baseline/rev2-6331559613336179781-00027"
+# print_figure(name)
+# name = "test_audio/baseline/rev3-6331559613336179781-00029"
+# print_figure(name)
+# name = "test_audio/baseline/rev4-6332062124509813446-00018"
+# print_figure(name)
+
+# # low_rank 
+# name = "test_audio/low_rank/rev1-6331559613336179781-00019"
+# print_figure(name)
+# name = "test_audio/low_rank/rev2-6331559613336179781-00027"
+# print_figure(name)
+# name = "test_audio/low_rank/rev3-6331559613336179781-00029"
+# print_figure(name)
+# name = "test_audio/low_rank/rev4-6332062124509813446-00018"
+# print_figure(name)
+
+# # low_rank + nas
+# name = "test_audio/low_rank+nas/rev1-6331559613336179781-00019"
+# print_figure(name)
+# name = "test_audio/low_rank+nas/rev2-6331559613336179781-00027"
+# print_figure(name)
+# name = "test_audio/low_rank+nas/rev3-6331559613336179781-00029"
+# print_figure(name)
+# name = "test_audio/low_rank+nas/rev4-6332062124509813446-00018"
+# print_figure(name)
+
+# # low_rank + parameter_sharing 
+# name = "test_audio/low_rank+parameter_sharing/rev1-6331559613336179781-00019"
+# print_figure(name)
+# name = "test_audio/low_rank+parameter_sharing/rev2-6331559613336179781-00027"
+# print_figure(name)
+# name = "test_audio/low_rank+parameter_sharing/rev3-6331559613336179781-00029"
+# print_figure(name)
+# name = "test_audio/low_rank+parameter_sharing/rev4-6332062124509813446-00018"
+# print_figure(name)
+
+# # low_rank + parameter_sharing+kl_based_quantization
+# name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev1-6331559613336179781-00019"
+# print_figure(name)
+# name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev2-6331559613336179781-00027"
+# print_figure(name)
+# name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev3-6331559613336179781-00029"
+# print_figure(name)
+# name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev4-6332062124509813446-00018"
+# print_figure(name)
+
+
+# baseline 
+
+name = "test_audio_ciavsr/baseline/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/baseline/rev2-6331559613336179781-00027"
+name = "test_audio_ciavsr/baseline/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/baseline/rev3-6331559613336179781-00029"
+name = "test_audio_ciavsr/baseline/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/baseline/rev4-6332062124509813446-00018"
+name = "test_audio_ciavsr/baseline/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender"
 print_figure(name)
 
 # low_rank 
-name = "test_audio/low_rank/rev1-6331559613336179781-00019"
+
+name = "test_audio_ciavsr/low_rank/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank/rev2-6331559613336179781-00027"
+name = "test_audio_ciavsr/low_rank/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank/rev3-6331559613336179781-00029"
+name = "test_audio_ciavsr/low_rank/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank/rev4-6332062124509813446-00018"
+name = "test_audio_ciavsr/low_rank/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender"
 print_figure(name)
 
-# low_rank + nas
-name = "test_audio/low_rank+nas/rev1-6331559613336179781-00019"
+# low_rank+nas
+
+name = "test_audio_ciavsr/low_rank+nas/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank+nas/rev2-6331559613336179781-00027"
+name = "test_audio_ciavsr/low_rank+nas/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank+nas/rev3-6331559613336179781-00029"
+name = "test_audio_ciavsr/low_rank+nas/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank+nas/rev4-6332062124509813446-00018"
+name = "test_audio_ciavsr/low_rank+nas/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender"
 print_figure(name)
 
-# low_rank + parameter_sharing 
-name = "test_audio/low_rank+parameter_sharing/rev1-6331559613336179781-00019"
+# low_rank+sharing
+
+name = "test_audio_ciavsr/low_rank+parameter_sharing/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank+parameter_sharing/rev2-6331559613336179781-00027"
+name = "test_audio_ciavsr/low_rank+parameter_sharing/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank+parameter_sharing/rev3-6331559613336179781-00029"
+name = "test_audio_ciavsr/low_rank+parameter_sharing/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank+parameter_sharing/rev4-6332062124509813446-00018"
+name = "test_audio_ciavsr/low_rank+parameter_sharing/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender"
 print_figure(name)
 
-# low_rank + parameter_sharing+kl_based_quantization
-name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev1-6331559613336179781-00019"
+# low_rank+sharing+kl
+
+name = "test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev2-6331559613336179781-00027"
+name = "test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev3-6331559613336179781-00029"
+name = "test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
 print_figure(name)
-name = "test_audio/low_rank+parameter_sharing+kl_based_quantization/rev4-6332062124509813446-00018"
+name = "test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender"
+print_figure(name)
+
+
+
+# mix
+
+name = "test_audio_ciavsr/mix/0/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
+print_figure(name)
+name = "test_audio_ciavsr/mix/0/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
+print_figure(name)
+name = "test_audio_ciavsr/mix/0/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
+print_figure(name)
+name = "test_audio_ciavsr/mix/0/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender"
+print_figure(name)
+
+# official clean
+
+name = "test_audio_ciavsr/official_clean/15/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
+print_figure(name)
+name = "test_audio_ciavsr/official_clean/15/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
+print_figure(name)
+name = "test_audio_ciavsr/official_clean/15/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender"
+print_figure(name)
+name = "test_audio_ciavsr/official_clean/15/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender"
 print_figure(name)
