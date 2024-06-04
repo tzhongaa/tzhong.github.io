@@ -356,6 +356,235 @@ Parameter Tying and Mixed Precision Quantization</h2>
   </audio>
 </td>
   </tr>
+</table>
+  <h4> C. Experimental results of speech enhancement front-end outputs on the simulated CI-AVSR overlapped speech </h4>
+  <table border="1">
+  <tr>
+    <th rowspan="2" colspan="2"></th>
+    <th rowspan="2" colspan="2">Maximum “lossless” compression ratio</th>
+    <th rowspan="2" colspan="4"> Examples </th>
+  </tr>
+  <tr>
+    <th colspan="2"> Target speaker video</th>
+    <th colspan="2"> - </th>
+    <td style="text-align:center">
+        <video src="test_audio_ciavsr/clean/video_select/1_40.mp4" controls="controls">
+            your browser does not support the video tag
+        </video>
+    </td>
+    <td style="text-align:center">
+        <video src="test_audio_ciavsr/clean/video_select/2_90.mp4" controls="controls">
+            your browser does not support the video tag
+        </video>
+    </td>
+    <td style="text-align:center">
+        <video src=test_audio_ciavsr/clean/video_select/2_98.mp4 controls="controls">
+            your browser does not support the video tag
+        </video>
+    </td>
+    <td style="text-align:center">
+        <video src=test_audio_ciavsr/clean/video_select/2_7.mp4 controls="controls">
+            your browser does not support the video tag
+        </video>
+    </td>
+</tr>
+<tr>
+  <th colspan="2"> Overlapped speech</th>
+  <th colspan="2"> - </th>
+  <td style="text-align:center">
+      <img src="test_audio_ciavsr/mix/0/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt>
+      <audio src="test_audio_ciavsr/mix/0/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+          Your browser does not support the audio element.
+      </audio>
+  </td>
+  <td style="text-align:center">
+      <img src="test_audio_ciavsr/mix/0/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt>
+      <audio src="test_audio_ciavsr/mix/0/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+          Your browser does not support the audio element.
+      </audio>
+  </td>
+  <td style="text-align:center">
+      <img src="test_audio_ciavsr/mix/0/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt>
+      <audio src="test_audio_ciavsr/mix/0/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+          Your browser does not support the audio element.
+      </audio>
+  </td>
+  <td style="text-align:center">
+      <img src="test_audio_ciavsr/mix/0/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.png" alt>
+      <audio src="test_audio_ciavsr/mix/0/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.wav" controls="controls">
+          Your browser does not support the audio element.
+      </audio>
+  </td>
+</tr>
+<tr>
+<th colspan="2">Clean speech</th>
+<th colspan="2">-</th>
+ <td style="text-align:center">
+    <img src="test_audio_ciavsr/official_clean/15/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt>
+    <audio src="test_audio_ciavsr/official_clean/15/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+        Your browser does not support the audio element.
+    </audio>
+</td>
+  <td style="text-align:center">
+    <img src="test_audio_ciavsr/official_clean/15/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt>
+    <audio src="test_audio_ciavsr/official_clean/15/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+        Your browser does not support the audio element.
+    </audio>
+</td>
+<td style="text-align:center">
+    <img src="test_audio_ciavsr/official_clean/15/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt>
+    <audio src="test_audio_ciavsr/official_clean/15/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+        Your browser does not support the audio element.
+    </audio>
+</td>
+<td style="text-align:center">
+    <img src="test_audio_ciavsr/official_clean/15/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.png" alt>
+    <audio src="test_audio_ciavsr/official_clean/15/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.wav" controls="controls">
+        Your browser does not support the audio element.
+    </audio>
+</td>
+</tr>
+<tr>
+<tr>
+<th colspan="2">Audio-visual Mask-based MVDR <br> (uncompressed model) <br> (Sys. 1 in TABLE IV in the submitted paper) </th>
+<th colspan="2">1.0 </th>
+<td style="text-align:center">
+    <img src="test_audio_ciavsr/baseline/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+    <audio src="test_audio_ciavsr/baseline/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+        Your browser does not support the audio element.
+    </audio>
+</td>
+<td style="text-align:center">
+  <img src="test_audio_ciavsr/baseline/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+  <audio src="test_audio_ciavsr/baseline/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+      Your browser does not support the audio element.
+  </audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/baseline/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+<audio src="test_audio_ciavsr/baseline/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+    Your browser does not support the audio element.
+</audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/baseline/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.png" alt >
+<audio src="test_audio_ciavsr/baseline/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.wav" controls="controls">
+  Your browser does not support the audio element.
+</audio>
+</td>
+</tr>
+<tr>
+<th colspan="2">Audio-visual Mask-based MVDR + <br> Low Rank <br> (Sys. 2 in TABLE IV in the submitted paper)</th>
+<th colspan="2">1.41</th>
+<td style="text-align:center">
+    <img src="test_audio_ciavsr/low_rank/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+    <audio src="test_audio_ciavsr/low_rank/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+        Your browser does not support the audio element.
+    </audio>
+</td>
+<td style="text-align:center">
+  <img src="test_audio_ciavsr/low_rank/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+  <audio src="test_audio_ciavsr/low_rank/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+      Your browser does not support the audio element.
+  </audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+    Your browser does not support the audio element.
+</audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.wav" controls="controls">
+  Your browser does not support the audio element.
+</audio>
+</td>
+</tr>
+<tr>
+<th colspan="2">Audio-visual Mask-based MVDR + <br>Low Rank + <br> Penalized NAS <br> (Sys. 4 in TABLE IV in the submitted paper)</th>
+<th colspan="2">1.70</th>
+<td style="text-align:center">
+  <img src="test_audio_ciavsr/low_rank+nas/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+  <audio src="test_audio_ciavsr/low_rank+nas/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+      Your browser does not support the audio element.
+  </audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank+nas/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank+nas/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+    Your browser does not support the audio element.
+</audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank+nas/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank+nas/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+  Your browser does not support the audio element.
+</audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank+nas/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank+nas/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.wav" controls="controls">
+Your browser does not support the audio element.
+</audio>
+</td>
+</tr>
+<tr>
+<th colspan="2">Audio-visual Mask-based MVDR + <br>Low Rank + <br> Parameter Sharing <br> (Sys. 5 in TABLE IV in the submitted paper)</th>
+<th colspan="2">2.71</th>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank+parameter_sharing/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank+parameter_sharing/final_select/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+    Your browser does not support the audio element.
+</audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank+parameter_sharing/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank+parameter_sharing/final_select/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+  Your browser does not support the audio element.
+</audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank+parameter_sharing/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank+parameter_sharing/final_select/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+Your browser does not support the audio element.
+</audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank+parameter_sharing/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank+parameter_sharing/final_select/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.wav" controls="controls">
+Your browser does not support the audio element.
+</audio>
+</td>
+</tr>
+<tr>
+<th colspan="2">Audio-visual Mask-based MVDR + <br>Low Rank + <br> Parameter Sharing + <br> KL Divergence Based <br> Mixed Precision Quantization <br> (Sys. 16 in TABLE IV in the submitted paper)</th>
+<th colspan="2">13.84</th>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C010-ICAVSP-00009-HKUSTXXX-XXXFXX-ih_10000040-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+  Your browser does not support the audio element.
+</audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C010-ICAVSP-00015-HKUSTXXX-XXXMXX-ih_20000090-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+Your browser does not support the audio element.
+</audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C010-ICAVSP-00023-HKUSTXXX-XXXFXX-ih_20000098-2spk_S1_S3-WindscreenWiper_Horn_RoadAmbiance_Alarm_CarDoor-SameGender.wav" controls="controls">
+Your browser does not support the audio element.
+</audio>
+</td>
+<td style="text-align:center">
+<img src="test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.png" alt >
+<audio src="test_audio_ciavsr/low_rank+parameter_sharing_kl_based_quantization/final_selected/C011-ICAVSP-00007-HKUSTXXX-XXXMXX-ih_20000007-2spk_S1_S4-BackgroundMusic_Rain_Hail_Ignition-DifferentGender.wav" controls="controls">
+Your browser does not support the audio element.
+</audio>
+</td>
+</tr>
       </table>
       </div>
       <h3><a name="sectionV">V. Reference</a></h3>
