@@ -61,7 +61,7 @@ Parameter Tying and Mixed Precision Quantization</h2>
     <img border="0" src="picture/neural_network.png" alt="architectures of speech enhancement front-end" height="10%">
     </div>
     <ul>
-        <li> Audio-visual multi-channel mask-based MVDR based speech separation system [1]. The TCN blocks are highlighted in blue (one in the Audio Block; three in the Target Speech and Noise Blocks each), which account for more than 84% of the overall model parameters. The speech separation front-end is on the top (the light yellow box), and the Conformer recognition back-end is on the bottom (the light red box)..</li>
+        <li> Audio-visual multi-channel mask-based MVDR based speech separation system [1]. The TCN blocks are highlighted in blue (one in the Audio Block; three in the Target Speech and Noise Blocks each), which account for more than 84% of the overall model parameters. The speech separation front-end is on the top (the light yellow box), and the Conformer recognition back-end is on the bottom (the light red box).</li>
     </ul>
     <h3> <a name="sectionII"> II. TCN Model Architecture Compression</a> </h3>
     <div style="border: none; width:60%; margin: 0 auto;">
@@ -114,15 +114,15 @@ Parameter Tying and Mixed Precision Quantization</h2>
         <ul>
             <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multi-channel overlapped speech using the Oxford LRS2 dataset [3] with 96997, 4272 and 4972 utterances respectively for training (91.37 hours), validation (2.59 hours) and test (2.32 hours). </li>
             <li> Espnet style Conformer AED ASR model contains 12 encoder and 6 decoder layers is used in the submitted paper. </li>
-            <li> In all the experiments of the simulated LRS2 overlapped speech, “lossless” compression is achieved when no statistically significant (MAPSSWE [4], &alpha;= 0.05) WER increase is observed after model compression. </li>
+            <li> In all the experiments of the Oxford LRS2 data simulated overlapped speech, “lossless” compression is achieved when no statistically significant (MAPSSWE [4], &alpha;= 0.05) WER increase is observed after model compression. </li>
         </ul>
         <h4> (2) CI-AVSR simulated overlapped speech </h4>
         <ul>
             <li> A 3-channel symmetric linear array with even inter-channel spacing is leveraged to simulate the multi-channel overlapped speech using the Cantonese CI-AVSR in-car command speech corpus [5] with 89804, 12844 and 13182 utterances respectively for training (68.8 hours), validation (9.4 hours) and test (9.4 hours). </li>
             <li> Espnet style Conformer AED ASR model contains 12 encoder and 6 decoder layers is used in the submitted paper. </li>
-            <li> In all the experiments of the simulated CI-AVSR overlapped speech, “lossless” compression is achieved when no statistically significant (MAPSSWE [4], 	&alpha;= 0.05) CER increase is observed after model compression. </li>
+            <li> In all the experiments of the CI-AVSR audio-visual Cantonese in-car speech simulated overlapped speech, “lossless” compression is achieved when no statistically significant (MAPSSWE [4], 	&alpha;= 0.05) CER increase is observed after model compression. </li>
         </ul>
-      <h4> B. Experimental results of speech enhancement front-end outputs on the simulated LRS2 overlapped speech </h4>
+      <h4> B. Experimental results on Oxford LRS2 data simulated overlapped speech </h4>
       <table border="1">
           <tr>
               <th rowspan="2" colspan="2"></th>
@@ -357,7 +357,7 @@ Parameter Tying and Mixed Precision Quantization</h2>
 </td>
   </tr>
 </table>
-  <h4> C. Experimental results of speech enhancement front-end outputs on the simulated CI-AVSR overlapped speech </h4>
+  <h4> C. Experimental results on CI-AVSR audio-visual Cantonese in-car speech simulated overlapped speech </h4>
   <table border="1">
   <tr>
     <th rowspan="2" colspan="2"></th>
